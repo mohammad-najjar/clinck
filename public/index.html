@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Roua Al-Najjar | Roua Clinic</title>
+<meta name="description" content="Botox, dermal fillers, facial aesthetics and skin rejuvenation with Dr. Roua Al-Najjar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="header" id="header">
+  <a class="logo" href="#top">Roua Clinic</a>
+  <nav class="menu" id="menu" aria-label="Main">
+    <a href="#treatments">Treatments</a><a href="#doctor">Dr. Roua</a><a href="#gallery">Results</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    <a class="btn btn--small" href="#booking">Request appointment</a>
+  </nav>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero__text">
+    <p class="kicker">Dr. Roua Al-Najjar</p>
+    <h1>Considered aesthetics, <em>for faces that still look like yours.</em></h1>
+    <p>Botox, dermal fillers and skin rejuvenation, planned around a proper consultation.</p>
+    <div class="hero__cta"><a class="btn" href="#booking">Request an appointment</a><a class="link" href="#treatments">View treatments</a></div>
+  </div>
+  <div class="hero__art reveal-image" aria-hidden="true"><div class="hero__arch" data-parallax="0.08"></div><span class="hero__caption">Clinic photography goes here</span></div>
+</section>
+
+<section class="intro reveal">
+  <h2>A quieter kind of beauty clinic.</h2>
+  <p>Every treatment begins with a conversation about what you want to change, what you don’t, and whether treatment is right for you at all. Appointments are unhurried and every plan is explained before it starts.</p>
+</section>
+
+<section class="treatments" id="treatments">
+  <h2 class="reveal">Treatments</h2>
+  <ol class="treatment-list" id="treatment-list"><li class="muted">Loading treatments…</li></ol>
+  <div class="split reveal">
+    <div><h3>Botox</h3><p>Used to soften expression lines. Suitability, dose and areas are decided by Dr. Roua during your consultation.</p></div>
+    <div><h3>Dermal fillers</h3><p>Used to restore volume and contour. Your plan is tailored to your features and goals.</p></div>
+  </div>
+</section>
+
+<section class="doctor" id="doctor">
+  <div class="doctor__photo reveal-image"><span>Portrait of Dr. Roua Al-Najjar</span></div>
+  <div class="reveal">
+    <h2>Dr. Roua Al-Najjar</h2>
+    <p>Founder of Roua Clinic.</p>
+    <p class="muted">Qualifications, training and experience are added here by the clinic.</p>
+  </div>
+</section>
+
+<section class="advantages">
+  <ul class="reveal">
+    <li><strong>Consultation first</strong>No treatment is started before you understand it.</li>
+    <li><strong>Personal plans</strong>Nothing is applied from a template.</li>
+    <li><strong>Clear follow-up</strong>You know who to contact after your visit.</li>
+  </ul>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2 class="reveal">Results</h2>
+  <p class="reveal">Before-and-after photos appear here only with each patient’s written consent. Individual results vary.</p>
+  <div class="gallery__empty reveal-image">Gallery coming soon</div>
+</section>
+
+<section class="faq" id="faq">
+  <h2 class="reveal">Questions</h2>
+  <details><summary>Is a consultation required first?</summary><p>Yes. Dr. Roua assesses you before recommending any treatment.</p></details>
+  <details><summary>Is my appointment confirmed immediately?</summary><p>No. Requests are pending until the clinic approves them and contacts you.</p></details>
+  <details><summary>Can I cancel or change my time?</summary><p>Contact the clinic and we will arrange another slot.</p></details>
+</section>
+
+<section class="booking" id="booking">
+  <div class="booking__intro"><h2>Request an appointment</h2><p>Choose a treatment and a time. Your request stays pending until the clinic confirms it.</p></div>
+  <form id="booking-form" novalidate>
+    <label>Treatment<select name="service" required></select><span class="err" data-for="service"></span></label>
+    <label>Date<input type="date" name="date" required><span class="err" data-for="date"></span></label>
+    <fieldset><legend>Available times</legend><div id="slots" class="slots" aria-live="polite"><p class="muted">Choose a date to see times.</p></div><span class="err" data-for="time"></span></fieldset>
+    <label>Full name<input name="name" autocomplete="name" required><span class="err" data-for="name"></span></label>
+    <label>Phone<input name="phone" type="tel" autocomplete="tel" required><span class="err" data-for="phone"></span></label>
+    <label>Notes (optional)<textarea name="notes" maxlength="500" rows="3"></textarea></label>
+    <button class="btn" type="submit">Send request</button>
+    <p id="form-msg" role="status" hidden></p>
+  </form>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p id="contact-info" class="muted">Contact details are managed by the clinic.</p>
+</section>
+</main>
+
+<footer class="footer"><span>Roua Clinic</span><span>© <span id="year"></span> Dr. Roua Al-Najjar</span></footer>
+<script src="/js/main.js"></script>
+<script src="/js/booking.js"></script>
+</body>
+</html>

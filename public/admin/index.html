@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Roua Clinic Admin</title><link rel="stylesheet" href="/css/admin.css"></head>
+<body>
+<main id="login" class="login" hidden>
+  <form id="login-form"><h1>Roua Clinic</h1>
+    <label>Email<input name="email" type="email" autocomplete="username" required></label>
+    <label>Password<input name="password" type="password" autocomplete="current-password" required></label>
+    <button>Sign in</button><p id="login-err" class="err"></p></form>
+</main>
+<div id="app" class="app" hidden>
+  <aside><strong>Roua Clinic</strong><nav><button data-tab="appointments" class="on">Appointments</button><button data-tab="services">Services</button><button data-tab="settings">Hours &amp; info</button></nav><button id="logout">Sign out</button></aside>
+  <section id="appointments" class="tab">
+    <div class="stats" id="stats"></div>
+    <div class="filters"><input id="f-q" placeholder="Search name or phone"><select id="f-status"><option value="">All statuses</option><option>pending</option><option>confirmed</option><option>completed</option><option>cancelled</option></select><select id="f-service"><option value="">All treatments</option></select><input id="f-date" type="date"></div>
+    <div class="scroll"><table><thead><tr><th>Date</th><th>Time</th><th>Patient</th><th>Treatment</th><th>Status</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+    <dialog id="detail"></dialog>
+  </section>
+  <section id="services" class="tab" hidden><h2>Services</h2><div id="service-list"></div><form id="service-new"><input name="name" placeholder="New service name" required><input name="description" placeholder="Description"><button>Add</button></form></section>
+  <section id="settings" class="tab" hidden><h2>Working hours &amp; clinic info</h2><form id="settings-form">
+    <label>Opens<input type="time" name="startTime"></label><label>Closes<input type="time" name="endTime"></label>
+    <label>Slot length (minutes)<input type="number" name="slotMinutes" min="15" max="180" step="5"></label>
+    <fieldset><legend>Closed days</legend><div id="days"></div></fieldset>
+    <label>Phone<input name="phone"></label><label>Address<input name="address"></label><button>Save</button><p id="settings-msg"></p></form></section>
+</div>
+<script src="/js/admin.js"></script></body></html>
