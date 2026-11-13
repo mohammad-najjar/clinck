@@ -1,3 +1,4 @@
+[hidden] { display: none !important; }
 :root { --bg: #f4f2ef; --panel: #fff; --ink: #2b2623; --line: #e3ded8; --accent: #8c6f3f; font-family: system-ui, sans-serif; }
 * { box-sizing: border-box; } body { margin: 0; background: var(--bg); color: var(--ink); }
 button, input, select { font: inherit; padding: .55rem .7rem; border: 1px solid var(--line); background: var(--panel); border-radius: 6px; }
